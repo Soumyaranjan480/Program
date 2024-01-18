@@ -1,7 +1,6 @@
 def apply_discount_rules(cart, total_quantity):
     max_quantity = max(cart.values())
 
-    # Check discount rules
     if total_quantity > 30 and max_quantity > 15:
         return "tiered_50_discount", 0.5
     elif total_quantity > 20:
