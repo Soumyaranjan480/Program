@@ -2,7 +2,6 @@ function applyDiscountRules(cart) {
     const totalQuantity = Object.values(cart).reduce((acc, val) => acc + val, 0);
     const maxQuantity = Math.max(...Object.values(cart));
 
-    // Evaluate discount rules
     if (totalQuantity > 30 && maxQuantity > 15) {
         return ["tiered_50_discount", 0.5];
     } else if (totalQuantity > 20) {
